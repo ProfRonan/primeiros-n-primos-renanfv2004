@@ -1,17 +1,16 @@
 numero = input("digite um número inteiro")
 numero = int(numero)
-a = 1
-while True:
-    a = a + 1
-    if numero == 1:
-        print("Não primo")
-        break
-    elif numero <= 0:
-        print("Número inválido")
-        break
-    elif numero % a == 0 and a != numero:
-        print("Não primo")
-        break
-    elif a == numero:
-        print("Primo")
-        break
+contador = 0
+a = 2
+while contador != numero:
+    b = 2
+    primo = True
+    while b < a:
+        if a % b == 0 and a != b:
+            primo = False
+            break
+        b = b + 1
+    if primo:
+        contador += 1
+        print(a)
+    a = a + 1
